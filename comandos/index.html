@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Rem - Comandos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="http://anime-gx.com/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<!-- <a href="#xxx">xxx</a> -->
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Comando</th>
+									<th class="cell100 column2">Descripción</th>
+									<th class="cell100 column3">Módulo</th>
+									<th class="cell100 column4">Modo de uso</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+								<tr class="row100 body">
+									<td class="cell100 column1">.delmsgoncmd</td>
+									<td class="cell100 column2">Elimina los comandos ejecutados para prevenir el flood.<p><b>Requiere permisos de administración.</b></td>
+									<td class="cell100 column3">Administración
+									<td class="cell100 column4"><code>.delmsgoncmd canal enable</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.deafen</td>
+									<td class="cell100 column2">Ensordece un usuario.<p><b>Requiere permisos para ensordecer.</b></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.deaf "@Inútil"</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.undeafen</td>
+									<td class="cell100 column2"><i>Desensordece</i> a un usuario.<p><b>Requiere permisos para ensordecer.</b></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.undeaf "@Inútil"</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.delvoichanl</td>
+									<td class="cell100 column2">Elimina un canal de voz.<p><b>Requiere permisos para administrar canales.</b></td></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.dvch Nombredelcanal</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.creatvoichanl</td>
+									<td class="cell100 column2">Crea un canal de voz.<p><b>Requiere permisos para administrar canales.</b></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.cvch Nombredelcanal</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.deltxtchanl</td>
+									<td class="cell100 column2">Elimina un canal de texto.<p><b>Requiere permisos para administrar canales.</b></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.dtch Nombredelcanal</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.creatxtchanl</td>
+									<td class="cell100 column2">Crea un canal de texto.<p><b>Requiere permisos para administrar canales.</b></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.ctch Nombredelcanal</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.settopic</td>
+									<td class="cell100 column2">Crea un canal de texto.<p><b>Requiere permisos para administrar canales.</b></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.st Todos Putys</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.setchanlname</td>
+									<td class="cell100 column2">Cambia el nombre del canal actual.<p><b>Requiere permisos para administrar canales.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.setchanlname Nombre</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.edit</td>
+									<td class="cell100 column2">Edita el mensaje del bot. Tienes que especificar una ID y <p>el nuevo mensaje. Puedes añadir <i>embeds</i>.<p><b>Requiere permisos para administrar mensajes.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.edit 7479498384 hola bb</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.autoassignrole</td>
+									<td class="cell100 column2">Le asigna automáticamente un rol específico a quien entre<p> al servidor. Ejecuta sin parámetro para desactivarlo.<p><b>Requiere permisos para administrar roles.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.aar <p>.aar Rol</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.languageset</td>
+									<td class="cell100 column2">La configuración de idioma del servidor.<p> En español por defecto.</td>
+									<td class="cell100 column3">Localización</td>
+									<td class="cell100 column4"><code>.langset en-US <p>.langset default</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.languageslist</td>
+									<td class="cell100 column2">Lista de idiomas disponibles.</td>
+									<td class="cell100 column3">Localización</td>
+									<td class="cell100 column4"><code>.langli</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.setmuterole</td>
+									<td class="cell100 column2">Configura el rol de silencio.<p><b>Requiere permisos para administrar roles.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.setmuterole Cállate, carajo</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.mute</td>
+									<td class="cell100 column2">Silencia al bastardo. Puedes especificar tiempo.<p><b>Requiere permisos para administrar roles.</b></p><p><b>Requiere permisos para silenciar miembros.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.mute @Inútil<p>.mute 1h30m @Inútil</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.unmute</td>
+									<td class="cell100 column2">Le quitas el silencio al bastardo.<p><b>Requiere permisos para administrar roles.</b></p><p><b>Requiere permisos para silenciar miembros.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.unmute @Inútil</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.chatmute</td>
+									<td class="cell100 column2">Silencias al bastardo solo del chat.<p><b>Requiere permisos para administrar roles.</b></p><p><b>Requiere permisos para silenciar miembros.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.chatmute @Inútil</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.chatunmute</td>
+									<td class="cell100 column2">Permites que el bastardo hable de nuevo.<p><b>Requiere permisos para administrar roles.</b></p><p><b>Requiere permisos para silenciar miembros.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.chatunmute @Inútil</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.voicemute</td>
+									<td class="cell100 column2">Silencio de voz.<p><b>Requiere permisos para administrar roles.</b></p><p><b>Requiere permisos para silenciar miembros.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.voicemute @Inútil</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.voiceunmute</td>
+									<td class="cell100 column2">Remueve el silencio de voz.<p><b>Requiere permisos para administrar roles.</b></p><p><b>Requiere permisos para silenciar miembros.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.voiceunmute @Inútil</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.prefix</td>
+									<td class="cell100 column2">Configura el prefijo del servidor. No pongas nada para<p> ver el actual. Por defecto es <code>.</code><p><b>Requiere permisos para administrar el servidor.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.prefix +</code></td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">.antiraid</td>
+									<td class="cell100 column2">Configura una protección antiraid. No pongas nada para desactivar. El primer parámetro es el número de personas <p>que ejecutará la protección, el segundo es cuántas personas tienen que entrar para activarla y el tercero es el castigo.<p><b>Requiere permisos para administrar el servidor.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.antiraid 5 20 Kick <p>.antiraid</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.antispam</td>
+									<td class="cell100 column2">Configura una protección para que no repitan el mismo mensaje cada cierto tiempo. No pongas nada para desactivar. Puedes proveer un castigo.<p><b>Requiere permisos para administrar el servidor.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.antispam 3 Mute <p>.antispam 4 Kick</code><code> <p>.antispam</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.antispamignore</td>
+									<td class="cell100 column2">El canal actual será ignorado por el antispam. <p>Este debe estar activo.<p><b>Requiere permisos para administrar el servidor.</b></p></td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.antispamignore</code></td>
+								</tr>
+								
+								<tr class="row100 body">
+									<td class="cell100 column1">.antilist</td>
+									<td class="cell100 column2">Muestra las protecciones activas.</td>
+									<td class="cell100 column3">Administración</td>
+									<td class="cell100 column4"><code>.antilist</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				<div class="table100 ver2 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head" id="xxx">
+									<th class="cell100 column1">Comando</th>
+									<th class="cell100 column2">Descripción</th>
+									<th class="cell100 column3">Módulo</th>
+									<th class="cell100 column4">Modo de uso</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+								<tr class="row100 body">
+									<td class="cell100 column1">...</td>
+									<td class="cell100 column2">...</td>
+									<td class="cell100 column3">...</td>
+									<td class="cell100 column4">...</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
