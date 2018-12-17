@@ -1,0 +1,3515 @@
+[
+  {
+    "name": ".delmsgoncmdAdministration",
+    "description": "Toggles the automatic deletion of the user's successful command message to prevent chat flood. You can use it either as a server toggle, channel whitelist, or channel blacklist, as channel option has 3 settings: Enable (always do it on this channel), Disable (never do it on this channel), and Inherit (respect server setting). Use list parameter to see the current states.RequiresAdministrator Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".delmsgoncmd\n.delmsgoncmd channel enable\n.delmsgoncmd channel inherit\n.delmsgoncmd list"
+  },
+  {
+    "name": ".deafenAdministration",
+    "description": "Deafens mentioned user or users.RequiresDeafenMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "DeafenMembers Server Permission"
+    ],
+    "usage": ".deaf \"@Someguy\"\n.deaf \"@Someguy\" \"@Someguy\""
+  },
+  {
+    "name": ".undeafenAdministration",
+    "description": "Undeafens mentioned user or users.RequiresDeafenMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "DeafenMembers Server Permission"
+    ],
+    "usage": ".undef \"@Someguy\"\n.undef \"@Someguy\" \"@Someguy\""
+  },
+  {
+    "name": ".delvoichanlAdministration",
+    "description": "Deletes a voice channel with a given name.RequiresManageChannels Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageChannels Server Permission"
+    ],
+    "usage": ".dvch VoiceChannelName"
+  },
+  {
+    "name": ".creatvoichanlAdministration",
+    "description": "Creates a new voice channel with a given name.RequiresManageChannels Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageChannels Server Permission"
+    ],
+    "usage": ".cvch VoiceChannelName"
+  },
+  {
+    "name": ".deltxtchanlAdministration",
+    "description": "Deletes a text channel with a given name.RequiresManageChannels Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageChannels Server Permission"
+    ],
+    "usage": ".dtch TextChannelName"
+  },
+  {
+    "name": ".creatxtchanlAdministration",
+    "description": "Creates a new text channel with a given name.RequiresManageChannels Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageChannels Server Permission"
+    ],
+    "usage": ".ctch TextChannelName"
+  },
+  {
+    "name": ".settopicAdministration",
+    "description": "Sets a topic on the current channel.RequiresManageChannels Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageChannels Server Permission"
+    ],
+    "usage": ".st My new topic"
+  },
+  {
+    "name": ".setchanlnameAdministration",
+    "description": "Changes the name of the current channel.RequiresManageChannels Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageChannels Server Permission"
+    ],
+    "usage": ".schn NewName"
+  },
+  {
+    "name": ".editAdministration",
+    "description": "Edits bot's message, you have to specify message ID and new text. Supports embeds.RequiresManageMessages Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".edit 7479498384 Hi :^)"
+  },
+  {
+    "name": ".autoassignroleAdministration",
+    "description": "Automaticaly assigns a specified role to every user who joins the server. Provide no parameters to disable.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".aar\n.aar RoleName"
+  },
+  {
+    "name": ".sqlselectAdministration",
+    "description": "Executes provided sql query and returns the results. Dangerous.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".sqlselect SELECT * FROM DiscordUser LIMIT 5"
+  },
+  {
+    "name": ".sqlexecAdministration",
+    "description": "Executes provided sql command and returns the number of affected rows. Dangerous.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".sqlexec UPDATE DiscordUser SET CurrencyAmount=CurrencyAmount+1234"
+  },
+  {
+    "name": ".deletewaifusAdministration",
+    "description": "Deletes everything from WaifuUpdates, WaifuItem and WaifuInfo tables.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".deletewaifus"
+  },
+  {
+    "name": ".deletewaifuAdministration",
+    "description": "Deletes everything from WaifuUpdates, WaifuItem and WaifuInfo tables for the specified user. Also makes specified user's waifus free.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".deletewaifus"
+  },
+  {
+    "name": ".deletecurrencyAdministration",
+    "description": "Deletes everything from Currency and CurrencyTransactions.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".deletecurrency"
+  },
+  {
+    "name": ".deleteplaylistsAdministration",
+    "description": "Deletes everything from MusicPlaylists.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".deleteplaylists"
+  },
+  {
+    "name": ".deleteexpAdministration",
+    "description": "deleteexpRequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": "deleteexp"
+  },
+  {
+    "name": ".deleteunusedcrnqAdministration",
+    "description": "Deletes all quotes and custom reactions which are older than a week and haven't been used a single time.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".deleteunusedcrnq"
+  },
+  {
+    "name": ".gvcAdministration",
+    "description": "Toggles game voice channel feature in the voice channel you're currently in. Users who join the game voice channel will get automatically redirected to the voice channel with the name of their current game, if it exists. Can't move users to channels that the bot has no connect permission for. One per server.RequiresAdministrator Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".gvc"
+  },
+  {
+    "name": ".languagesetAdministration",
+    "description": "Sets this server's response language. If bot's response strings have been translated to that language, bot will use that language in this server. Reset by using default as the locale name. Provide no parameters to see currently set language.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".langset de-DE \n.langset default"
+  },
+  {
+    "name": ".langsetdefaultAdministration",
+    "description": "Sets the bot's default response language. All servers which use a default locale will use this one. Setting to default will use the host's current culture. Provide no parameters to see currently set language.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".langsetd en-US\n.langsetd default"
+  },
+  {
+    "name": ".languageslistAdministration",
+    "description": "List of languages for which translation (or part of it) exist atm.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".langli"
+  },
+  {
+    "name": ".logserverAdministration",
+    "description": "Enables or Disables ALL log events. If enabled, all log events will log to this channel.RequiresAdministrator Server PermissionBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission",
+      "Bot Owner Only"
+    ],
+    "usage": ".logserver enable\n.logserver disable"
+  },
+  {
+    "name": ".logignoreAdministration",
+    "description": "Toggles whether the .logserver command ignores this channel. Useful if you have hidden admin channel and public log channel.RequiresAdministrator Server PermissionBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission",
+      "Bot Owner Only"
+    ],
+    "usage": ".logignore"
+  },
+  {
+    "name": ".logeventsAdministration",
+    "description": "Shows a list of all events you can subscribe to with .logRequiresAdministrator Server PermissionBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission",
+      "Bot Owner Only"
+    ],
+    "usage": ".logevents"
+  },
+  {
+    "name": ".logAdministration",
+    "description": "Toggles logging event. Disables it if it is active anywhere on the server. Enables if it isn't active. Use .logevents to see a list of all events you can subscribe to.RequiresAdministrator Server PermissionBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission",
+      "Bot Owner Only"
+    ],
+    "usage": ".log userpresence\n.log userbanned"
+  },
+  {
+    "name": ".setmuteroleAdministration",
+    "description": "Sets a name of the role which will be assigned to people who should be muted. Default is nadeko-mute.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".setmuterole Silenced"
+  },
+  {
+    "name": ".muteAdministration",
+    "description": "Mutes a mentioned user both from speaking and chatting. You can also specify time string for how long the user should be muted.RequiresManageRoles Server PermissionMuteMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission",
+      "MuteMembers Server Permission"
+    ],
+    "usage": ".mute @Someone\n.mute 1h30m @Someone"
+  },
+  {
+    "name": ".unmuteAdministration",
+    "description": "Unmutes a mentioned user previously muted with .mute command.RequiresManageRoles Server PermissionMuteMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission",
+      "MuteMembers Server Permission"
+    ],
+    "usage": ".unmute @Someone"
+  },
+  {
+    "name": ".chatmuteAdministration",
+    "description": "Prevents a mentioned user from chatting in text channels.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".chatmute @Someone"
+  },
+  {
+    "name": ".chatunmuteAdministration",
+    "description": "Removes a mute role previously set on a mentioned user with .chatmute which prevented him from chatting in text channels.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".chatunmute @Someone"
+  },
+  {
+    "name": ".voicemuteAdministration",
+    "description": "Prevents a mentioned user from speaking in voice channels.RequiresMuteMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "MuteMembers Server Permission"
+    ],
+    "usage": ".voicemute @Someone"
+  },
+  {
+    "name": ".voiceunmuteAdministration",
+    "description": "Gives a previously voice-muted user a permission to speak.RequiresMuteMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "MuteMembers Server Permission"
+    ],
+    "usage": ".voiceunmute @Someguy"
+  },
+  {
+    "name": ".rotateplayingAdministration",
+    "description": "Toggles rotation of playing status of the dynamic strings you previously specified.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".ropl"
+  },
+  {
+    "name": ".addplayingAdministration",
+    "description": "Adds a specified string to the list of playing strings to rotate. You have to pick either 'Playing', 'Watching' or 'Listening' as the first parameter. Supported placeholders: %servers%, %users%, %playing%, %queued%, %time%, %shardid%, %shardcount%, %shardguilds%.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".adpl Playing with you\n.adpl Watching you sleep"
+  },
+  {
+    "name": ".listplayingAdministration",
+    "description": "Lists all playing statuses with their corresponding number.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".lipl"
+  },
+  {
+    "name": ".removeplayingAdministration",
+    "description": "Removes a playing string on a given number.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".rmpl"
+  },
+  {
+    "name": ".prefixAdministration",
+    "description": "Sets this server's prefix for all bot commands. Provide no parameters to see the current server prefix. Setting prefix requires Administrator server permission.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".prefix +"
+  },
+  {
+    "name": ".defprefixAdministration",
+    "description": "Sets bot's default prefix for all bot commands. Provide no parameters to see the current default prefix. This will not change this server's current prefix.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".defprefix +"
+  },
+  {
+    "name": ".antiraidAdministration",
+    "description": "Sets an anti-raid protection on the server. Provide no parameters to disable. First parameter is number of people which will trigger the protection. Second parameter is a time interval in which that number of people needs to join in order to trigger the protection, and third parameter is punishment for those people (Kick, Ban, Mute)RequiresAdministrator Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".antiraid 5 20 Kick\n.antiraid"
+  },
+  {
+    "name": ".antispamAdministration",
+    "description": "Stops people from repeating same message X times in a row. Provide no parameters to disable. You can specify to either mute, kick or ban the offenders. If you're using mute, you can add a number of seconds at the end to use a timed mute. Max message count is 10.RequiresAdministrator Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".antispam 3 Mute\n.antispam 4 Kick\n.antispam"
+  },
+  {
+    "name": ".antispamignoreAdministration",
+    "description": "Toggles whether antispam ignores current channel. Antispam must be enabled.RequiresAdministrator Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".antispamignore"
+  },
+  {
+    "name": ".antilistAdministration",
+    "description": "Shows currently enabled protection features.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".antilist"
+  },
+  {
+    "name": ".pruneAdministration",
+    "description": ".prune removes all Nadeko's messages in the last 100 messages. .prune X removes last X number of messages from the channel (up to 100). .prune @Someone removes all Someone's messages in the last 100 messages. .prune @Someone X removes last X number of 'Someone's' messages in the channel.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".prune\n.prune 5\n.prune @Someone\n.prune @Someone X"
+  },
+  {
+    "name": ".reactionrolesAdministration",
+    "description": "Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the first parameter to make them exclusive. You can have up to 5 of these enabled on one server at a time.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".reactionroles Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:\n.reactionroles excl Horde :Horde: Alliance :Alliance:"
+  },
+  {
+    "name": ".reactionroleslistAdministration",
+    "description": "Lists all ReactionRole messages on this channel and their indexes.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".reactionroleslist"
+  },
+  {
+    "name": ".reactionrolesremoveAdministration",
+    "description": "Removed a ReactionRole message on the specified index.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".rerorm 1"
+  },
+  {
+    "name": ".setroleAdministration",
+    "description": "Sets a role for a given user.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".sr @User Guest"
+  },
+  {
+    "name": ".removeroleAdministration",
+    "description": "Removes a role from a given user.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".rr @User Admin"
+  },
+  {
+    "name": ".renameroleAdministration",
+    "description": "Renames a role. The role you are renaming must be lower than bot's highest role.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".renr \"First role\" SecondRole"
+  },
+  {
+    "name": ".removeallrolesAdministration",
+    "description": "Removes all roles from a mentioned user.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".rar @User"
+  },
+  {
+    "name": ".createroleAdministration",
+    "description": "Creates a role with a given name.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".cr Awesome Role"
+  },
+  {
+    "name": ".deleteroleAdministration",
+    "description": "Deletes a role with a given name.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".dr Awesome Role"
+  },
+  {
+    "name": ".rolehoistAdministration",
+    "description": "Toggles whether this role is displayed in the sidebar or not.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".rh Guests\n.rh \"Space Wizards\""
+  },
+  {
+    "name": ".rolecolorAdministration",
+    "description": "Set a role's color using its hex value. Provide no color in order to see the hex value of the color of the specified role.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".roleclr Admin\n.roleclr Admin ffba55"
+  },
+  {
+    "name": ".mentionroleAdministration",
+    "description": "Mentions a role. If the role is not mentionable, bot will make it mentionable for a moment.RequiresMentionEveryone Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "MentionEveryone Server Permission"
+    ],
+    "usage": ".menro RoleName"
+  },
+  {
+    "name": ".adsarmAdministration",
+    "description": "Toggles the automatic deletion of confirmations for .iam and .iamn commands.RequiresManageMessages Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".adsarm"
+  },
+  {
+    "name": ".asarAdministration",
+    "description": "Adds a role to the list of self-assignable roles. You can also specify a group. If 'Exclusive self-assignable roles' feature is enabled, users will be able to pick one role per group.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".asar Gamer\n.asar 1 Alliance\n.asar 1 Horde"
+  },
+  {
+    "name": ".sargnAdministration",
+    "description": "Sets a self assignable role group name. Provide no name to remove.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".sargn 1 Faction\n.sargn 2"
+  },
+  {
+    "name": ".rsarAdministration",
+    "description": "Removes a specified role from the list of self-assignable roles.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".rsar"
+  },
+  {
+    "name": ".lsarAdministration",
+    "description": "Lists self-assignable roles. Shows 20 roles per page.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".lsar\n.lsar 2"
+  },
+  {
+    "name": ".togglexclsarAdministration",
+    "description": "Toggles whether the self-assigned roles are exclusive. While enabled, users can only have one self-assignable role per group.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".tesar"
+  },
+  {
+    "name": ".rolelevelreqAdministration",
+    "description": "Set a level requirement on a self-assignable role.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".rlr 5 SomeRole"
+  },
+  {
+    "name": ".iamAdministration",
+    "description": "Adds a role to you that you choose. Role must be on a list of self-assignable roles.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".iam Gamer"
+  },
+  {
+    "name": ".iamnotAdministration",
+    "description": "Removes a specified role from you. Role must be on a list of self-assignable roles.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".iamn Gamer"
+  },
+  {
+    "name": ".updatescheckAdministration",
+    "description": "Select which kind of updates you want to be notified of every 8 hours. You can specify 'release' to check only for new windows releases, 'commit' to be notified of new commits, or 'none' to not get notified.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".updatescheck commit\n.updatescheck release"
+  },
+  {
+    "name": ".scaddAdministration",
+    "description": "Adds a command to the list of commands which will be executed automatically in the current channel, in the order they were added in, by the bot when it startups up.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".scadd .stats"
+  },
+  {
+    "name": ".autocmdaddAdministration",
+    "description": "Adds a command to the list of commands which will be executed automatically every X seconds.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".autocmdadd 60 .prune 1000"
+  },
+  {
+    "name": ".sclistAdministration",
+    "description": "Lists all startup commands in the order they will be executed in.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".sclist"
+  },
+  {
+    "name": ".autocmdsAdministration",
+    "description": "Lists all auto commands and the intervals in which they execute.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".autolist"
+  },
+  {
+    "name": ".waitAdministration",
+    "description": "Used only as a startup command. Waits a certain number of miliseconds before continuing the execution of the following startup commands.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".wait 3000"
+  },
+  {
+    "name": ".scrmAdministration",
+    "description": "Removes a startup or auto command with the provided index.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".scrm 3"
+  },
+  {
+    "name": ".scclrAdministration",
+    "description": "Removes all startup commands.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".scclr"
+  },
+  {
+    "name": ".fwmsgsAdministration",
+    "description": "Toggles forwarding of non-command messages sent to bot's DM to the bot ownersRequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".fwmsgs"
+  },
+  {
+    "name": ".fwtoallAdministration",
+    "description": "Toggles whether messages will be forwarded to all bot owners or only to the first one specified in the credentials.json fileRequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".fwtoall"
+  },
+  {
+    "name": ".shardstatsAdministration",
+    "description": "Stats for shards. Paginated with 25 shards per page.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".shardstats\n.shardstats 2"
+  },
+  {
+    "name": ".restartshardAdministration",
+    "description": "Try (re)connecting a shard with a certain shardid when it dies. No one knows will it work. Keep an eye on the console for errors.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".restartshard 2"
+  },
+  {
+    "name": ".leaveAdministration",
+    "description": "Makes Nadeko leave the server. Either server name or server ID is required.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".leave 123123123331"
+  },
+  {
+    "name": ".dieAdministration",
+    "description": "Shuts the bot down.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".die"
+  },
+  {
+    "name": ".restartAdministration",
+    "description": "Restarts the bot. Might not work.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".restart"
+  },
+  {
+    "name": ".setnameAdministration",
+    "description": "Gives the bot a new name.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".newnm BotName"
+  },
+  {
+    "name": ".setnickAdministration",
+    "description": "Changes the nickname of the bot on this server. You can also target other users to change their nickname.RequiresManageNicknames Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageNicknames Server Permission"
+    ],
+    "usage": ".setnick BotNickname\n.setnick @SomeUser New Nickname"
+  },
+  {
+    "name": ".setstatusAdministration",
+    "description": "Sets the bot's status. (Online/Idle/Dnd/Invisible)RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".setstatus Idle"
+  },
+  {
+    "name": ".setavatarAdministration",
+    "description": "Sets a new avatar image for the NadekoBot. Parameter is a direct link to an image.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".setav http://i.imgur.com/xTG3a1I.jpg"
+  },
+  {
+    "name": ".setgameAdministration",
+    "description": "Sets the bots game status to either Playing, Listening, or Watching.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".setgame Playing with snakes.\n.setgame Watching anime.\n.setgame Listening music."
+  },
+  {
+    "name": ".setstreamAdministration",
+    "description": "Sets the bots stream. First parameter is the twitch link, second parameter is stream name.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".setstream TWITCHLINK Hello"
+  },
+  {
+    "name": ".sendAdministration",
+    "description": "Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with | and prefix the channel id with c: and the user id with u:.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".send serverid|c:channelid message\n.send serverid|u:userid message"
+  },
+  {
+    "name": ".imagesreloadAdministration",
+    "description": "Reloads images bot is using. Safe to use even when bot is being used heavily.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".imagesreload"
+  },
+  {
+    "name": ".botconfigreloadAdministration",
+    "description": "Reloads bot configuration in case you made changes to the BotConfig table either with .sqlexec or manually in the .db file.RequiresBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".botconfigreload"
+  },
+  {
+    "name": ".greetdelAdministration",
+    "description": "Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion.RequiresManageServer Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageServer Server Permission"
+    ],
+    "usage": ".greetdel 0\n.greetdel 30"
+  },
+  {
+    "name": ".greetAdministration",
+    "description": "Toggles anouncements on the current channel when someone joins the server.RequiresManageServer Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageServer Server Permission"
+    ],
+    "usage": ".greet"
+  },
+  {
+    "name": ".greetmsgAdministration",
+    "description": "Sets a new join announcement message which will be shown in the server's channel. Type %user% if you want to mention the new member. Using it with no message will show the current greet message. You can use embed json from https://embedbuilder.nadekobot.me/ instead of a regular text, if you want the message to be embedded.RequiresManageServer Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageServer Server Permission"
+    ],
+    "usage": ".greetmsg Welcome, %user%."
+  },
+  {
+    "name": ".greetdmAdministration",
+    "description": "Toggles whether the greet messages will be sent in a DM (This is separate from greet - you can have both, any or neither enabled).RequiresManageServer Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageServer Server Permission"
+    ],
+    "usage": ".greetdm"
+  },
+  {
+    "name": ".greetdmmsgAdministration",
+    "description": "Sets a new join announcement message which will be sent to the user who joined. Type %user% if you want to mention the new member. Using it with no message will show the current DM greet message. You can use embed json from https://embedbuilder.nadekobot.me instead of a regular text, if you want the message to be embedded.RequiresManageServer Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageServer Server Permission"
+    ],
+    "usage": ".greetdmmsg Welcome to the server, %user%"
+  },
+  {
+    "name": ".byeAdministration",
+    "description": "Toggles anouncements on the current channel when someone leaves the server.RequiresManageServer Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageServer Server Permission"
+    ],
+    "usage": ".bye"
+  },
+  {
+    "name": ".byemsgAdministration",
+    "description": "Sets a new leave announcement message. Type %user% if you want to show the name the user who left. Type %id% to show id. Using this command with no message will show the current bye message. You can use embed json from https://embedbuilder.nadekobot.me/ instead of a regular text, if you want the message to be embedded.RequiresManageServer Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageServer Server Permission"
+    ],
+    "usage": ".byemsg %user% has left."
+  },
+  {
+    "name": ".byedelAdministration",
+    "description": "Sets the time it takes (in seconds) for bye messages to be auto-deleted. Set it to 0 to disable automatic deletion.RequiresManageServer Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageServer Server Permission"
+    ],
+    "usage": ".byedel 0\n.byedel 30"
+  },
+  {
+    "name": ".slowmodeAdministration",
+    "description": "Toggles slowmode. Slowmode deletes any excess messages users type over the specified limit of messages per X seconds. To enable, specify a number of messages (-m) each user can send, and an interval in seconds (-s).  Disable by specifying no parameters. Options --message-count (-m)   Number of messages user can send.--seconds (-s)   Interval in which the user can send the specified number of messages.  RequiresManageMessages Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".slowmode -m 1 -s 5\n.slowmode"
+  },
+  {
+    "name": ".slowmodewlAdministration",
+    "description": "Ignores a role or a user from the slowmode feature.RequiresManageMessages Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".slowmodewl SomeRole\n.slowmodewl AdminDude"
+  },
+  {
+    "name": ".timezonesAdministration",
+    "description": "Lists all timezones available on the system to be used with .timezone.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".timezones"
+  },
+  {
+    "name": ".timezoneAdministration",
+    "description": "Sets this guilds timezone. This affects bot's time output in this server (logs, etc..)",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".timezone\n.timezone GMT Standard Time"
+  },
+  {
+    "name": ".warnAdministration",
+    "description": "Warns a user.RequiresBanMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "BanMembers Server Permission"
+    ],
+    "usage": ".warn @b1nzy Very rude person"
+  },
+  {
+    "name": ".warnlogAdministration",
+    "description": "See a list of warnings of a certain user.RequiresBanMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "BanMembers Server Permission"
+    ],
+    "usage": ".warnlog @b1nzy"
+  },
+  {
+    "name": ".warnlogallAdministration",
+    "description": "See a list of all warnings on the server. 15 users per page.RequiresBanMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "BanMembers Server Permission"
+    ],
+    "usage": ".warnlogall\n.warnlogall 2"
+  },
+  {
+    "name": ".warnclearAdministration",
+    "description": "Clears all warnings from a certain user. You can specify a number to clear a specific one.RequiresBanMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "BanMembers Server Permission"
+    ],
+    "usage": ".warnclear @PoorDude 3\n.warnclear @PoorDude"
+  },
+  {
+    "name": ".warnpunishAdministration",
+    "description": "Sets a punishment for a certain number of warnings. You can specify a time string after 'Ban' or 'Mute' punishment to make it a temporary mute/ban. Provide no punishment to remove.RequiresBanMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "BanMembers Server Permission"
+    ],
+    "usage": ".warnp 5 Ban\n.warnp 3\n.warnp 5 Mute 2d12h"
+  },
+  {
+    "name": ".warnpunishlistAdministration",
+    "description": "Lists punishments for warnings.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".warnpunishlist"
+  },
+  {
+    "name": ".banAdministration",
+    "description": "Bans a user by ID or name with an optional message. You can specify a time string before the user name to ban the user temporarily.RequiresBanMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "BanMembers Server Permission"
+    ],
+    "usage": ".b \"@some Guy\" Your behaviour is toxic.\n.b 1d12h @b1nzy Come back when u chill"
+  },
+  {
+    "name": ".unbanAdministration",
+    "description": "Unbans a user with the provided user#discrim or id.RequiresBanMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "BanMembers Server Permission"
+    ],
+    "usage": ".unban kwoth#1234\n.unban 123123123"
+  },
+  {
+    "name": ".softbanAdministration",
+    "description": "Bans and then unbans a user by ID or name with an optional message.RequiresKickMembers Server PermissionManageMessages Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "KickMembers Server Permission",
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".sb \"@some Guy\" Your behaviour is toxic."
+  },
+  {
+    "name": ".kickAdministration",
+    "description": "Kicks a mentioned user.RequiresKickMembers Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "KickMembers Server Permission"
+    ],
+    "usage": ".k \"@some Guy\" Your behaviour is toxic."
+  },
+  {
+    "name": ".masskillAdministration",
+    "description": "Specify a new-line separated list of userid reason. You can use Username#discrim instead of UserId. Specified users will be banned from the current server, blacklisted from the bot, and have all of their flowers taken away.RequiresBanMembers Server PermissionBot Owner Only",
+    "module": "Administration",
+    "permissions": [
+      "BanMembers Server Permission",
+      "Bot Owner Only"
+    ],
+    "usage": ".masskill BadPerson#1234 Toxic person"
+  },
+  {
+    "name": ".vcroleAdministration",
+    "description": "Sets or resets a role which will be given to users who join the voice channel you're in when you run this command. Provide no role name to disable. You must be in a voice channel to run this command.RequiresManageRoles Server Permission",
+    "module": "Administration",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".vcrole SomeRole\n.vcrole"
+  },
+  {
+    "name": ".vcrolelistAdministration",
+    "description": "Shows a list of currently set voice channel roles.",
+    "module": "Administration",
+    "permissions": [],
+    "usage": ".vcrolelist"
+  },
+  {
+    "name": ".addcustreactCustomReactions",
+    "description": "Add a custom reaction with a trigger and a response. Running this command in server requires the Administration permission. Running this command in DM is Bot Owner only and adds a new global custom reaction. Guide here: http://nadekobot.readthedocs.io/en/latest/Custom%20Reactions/",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".acr \"hello\" Hi there %user%"
+  },
+  {
+    "name": ".editcustreactCustomReactions",
+    "description": "Edits the custom reaction's response given its ID.",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".ecr 123 I'm a magical girl"
+  },
+  {
+    "name": ".listcustreactCustomReactions",
+    "description": "Lists global or server custom reactions (20 commands per page). Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions. Specifying all parameter instead of the number will DM you a text file with a list of all custom reactions.",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".lcr 1\n.lcr all"
+  },
+  {
+    "name": ".listcustreactgCustomReactions",
+    "description": "Lists global or server custom reactions (20 commands per page) grouped by trigger, and show a number of responses for each. Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions.",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".lcrg 1"
+  },
+  {
+    "name": ".showcustreactCustomReactions",
+    "description": "Shows a custom reaction's response on a given ID.",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".scr 1"
+  },
+  {
+    "name": ".delcustreactCustomReactions",
+    "description": "Deletes a custom reaction on a specific index. If ran in DM, it is bot owner only and deletes a global custom reaction. If ran in a server, it requires Administration privileges and removes server custom reaction.",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".dcr 5"
+  },
+  {
+    "name": ".crcaCustomReactions",
+    "description": "Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it).",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".crca 44"
+  },
+  {
+    "name": ".crdmCustomReactions",
+    "description": "Toggles whether the response message of the custom reaction will be sent as a direct message.",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".crdm 44"
+  },
+  {
+    "name": ".cradCustomReactions",
+    "description": "Toggles whether the message triggering the custom reaction will be automatically deleted.",
+    "module": "CustomReactions",
+    "permissions": [],
+    "usage": ".crad 59"
+  },
+  {
+    "name": ".crsreloadCustomReactions",
+    "description": "Reloads all custom reactions on all shards. Use this if you've made changes to the database while the bot is running, or used .deleteunusedcrnqRequiresBot Owner Only",
+    "module": "CustomReactions",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".crsreload"
+  },
+  {
+    "name": ".crclearCustomReactions",
+    "description": "Deletes all custom reactions on this server.RequiresAdministrator Server Permission",
+    "module": "CustomReactions",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".crclear"
+  },
+  {
+    "name": ".economyGambling",
+    "description": "Breakdown of the current state of the bot's economy. Updates every 3 minutes.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".economy"
+  },
+  {
+    "name": ".timelyGambling",
+    "description": "Use to claim your 'timely' currency. Bot owner has to specify the amount and the period on how often you can claim your currency.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".timely"
+  },
+  {
+    "name": ".timelyresetGambling",
+    "description": "Resets all user timeouts on .timely command.RequiresBot Owner Only",
+    "module": "Gambling",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".timelyreset"
+  },
+  {
+    "name": ".timelysetGambling",
+    "description": "Sets the 'timely' currency allowance amount for users. Second parameter is period in hours, default is 24 hours.RequiresBot Owner Only",
+    "module": "Gambling",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".timelyset 100\n.timelyset 50 12"
+  },
+  {
+    "name": ".raffleGambling",
+    "description": "Prints a name and ID of a random online user from the server, or from the online user in the specified role.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".raffle\n.raffle RoleName"
+  },
+  {
+    "name": ".raffleanyGambling",
+    "description": "Prints a name and ID of a random user from the server, or from the specified role.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".raffleany\n.raffleany  RoleName"
+  },
+  {
+    "name": ".$Gambling",
+    "description": "Check how much currency a person has. (Defaults to yourself)",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".$\n.$ @SomeGuy"
+  },
+  {
+    "name": ".curtrsGambling",
+    "description": "Shows your currency transactions on the specified page. Bot owner can see other people's transactions too.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".curtrs 2\n.curtrs @SomeUser 2"
+  },
+  {
+    "name": ".giveGambling",
+    "description": "Give someone a certain amount of currency. You can specify the reason after the mention.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".give 1 @SomeGuy\n.give 5 @CootGurl Ur so pwetty"
+  },
+  {
+    "name": ".awardGambling",
+    "description": "Awards someone a certain amount of currency. You can specify the reason after the Username. You can also specify a role name to award currency to all users in a role.RequiresBot Owner Only",
+    "module": "Gambling",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".award 100 @person\n.award 5 Role Of Gamblers"
+  },
+  {
+    "name": ".takeGambling",
+    "description": "Takes a certain amount of currency from someone.RequiresBot Owner Only",
+    "module": "Gambling",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".take 1 @SomeGuy"
+  },
+  {
+    "name": ".rollduelGambling",
+    "description": "Challenge someone to a roll duel by specifying the amount and the user you wish to challenge as the parameters. To accept the challenge, just specify the name of the user who challenged you, without the amount.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".rollduel 50 @SomeGuy\n.rollduel @Challenger"
+  },
+  {
+    "name": ".betrollGambling",
+    "description": "Bets a certain amount of currency and rolls a dice. Rolling over 66 yields x2 of your currency, over 90 - x4 and 100 x10.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".br 5"
+  },
+  {
+    "name": ".leaderboardGambling",
+    "description": "Displays the bot's currency leaderboard.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".lb"
+  },
+  {
+    "name": ".rpsGambling",
+    "description": "Play a game of Rocket-Paperclip-Scissors with Nadeko. You can bet on it. Multiplier is the same as on betflip.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".rps r 100\n.rps scissors"
+  },
+  {
+    "name": ".raceGambling",
+    "description": "Starts a new animal race. Options --start-time (-s)     ",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".race"
+  },
+  {
+    "name": ".joinraceGambling",
+    "description": "Joins a new race. You can specify an amount of currency for betting (optional). You will get YourBet*(participants-1) back if you win.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".jr\n.jr 5"
+  },
+  {
+    "name": ".blackjackGambling",
+    "description": "Start or join a blackjack game. You must specify the amount you're betting. Use .hit, .stand and .double commands to play. Game is played with 4 decks. Dealer hits on soft 17 and wins draws.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".bj 50"
+  },
+  {
+    "name": ".hitGambling",
+    "description": "In the blackjack game, ask the dealer for an extra card.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".hit"
+  },
+  {
+    "name": ".standGambling",
+    "description": "Finish your turn in the blackjack game.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".stand"
+  },
+  {
+    "name": ".doubleGambling",
+    "description": "In the blackjack game, double your bet in order to receive exactly one more card, and your turn ends.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".double"
+  },
+  {
+    "name": ".connect4Gambling",
+    "description": "Creates or joins an existing connect4 game. 2 players are required for the game. Objective of the game is to get 4 of your pieces next to each other in a vertical, horizontal or diagonal line. You can specify a bet when you create a game and only users who bet the same amount will be able to join your game. Options --turn-timer (-t)   Turn time in seconds. It has to be between 5 and 60. Default 15.--bet (-b)   Amount you bet. Default 0.  ",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".connect4"
+  },
+  {
+    "name": ".eventstartGambling",
+    "description": "Starts one of the events seen on public nadeko. Events: reaction, gamestatus Options --amount (-a)   Amount of currency each user receives.--pot-size (-p)   The maximum amount of currency that can be rewarded. 0 means no limit.--duration (-d)   Number of hours the event should run for. Default 24.  RequiresBot Owner Only",
+    "module": "Gambling",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".eventstart reaction\n.eventstart reaction -d 1 -a 50 --pot-size 1500"
+  },
+  {
+    "name": ".rafflecurGambling",
+    "description": "Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a mixed mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".rafflecur 20\n.rafflecur mixed 15"
+  },
+  {
+    "name": ".rollGambling",
+    "description": "Rolls 0-100. If you supply a number X it rolls up to 30 normal dice. If you split 2 numbers with letter d (xdy) it will roll X dice from 1 to y. Y can be a letter 'F' if you want to roll fate dice instead of dnd.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".roll\n.roll 7\n.roll 3d5\n.roll 5dF"
+  },
+  {
+    "name": ".rolluoGambling",
+    "description": "Rolls X normal dice (up to 30) unordered. If you split 2 numbers with letter d (xdy) it will roll X dice from 1 to y.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".rolluo\n.rolluo 7\n.rolluo 3d5"
+  },
+  {
+    "name": ".nrollGambling",
+    "description": "Rolls in a given range. If you specify just one number instead of the range, it will role from 0 to that number.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".nroll 5\n.nroll 5-15"
+  },
+  {
+    "name": ".drawGambling",
+    "description": "Draws a card from this server's deck. You can draw up to 10 cards by supplying a number of cards to draw.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".draw\n.draw 5"
+  },
+  {
+    "name": ".drawnewGambling",
+    "description": "Draws a card from the NEW deck of cards. You can draw up to 10 cards by supplying a number of cards to draw.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".drawnew\n.drawnew 5"
+  },
+  {
+    "name": ".deckshuffleGambling",
+    "description": "Reshuffles all cards back into the deck.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".dsh"
+  },
+  {
+    "name": ".flipGambling",
+    "description": "Flips coin(s) - heads or tails, and shows an image.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".flip\n.flip 3"
+  },
+  {
+    "name": ".betflipGambling",
+    "description": "Bet to guess will the result be heads or tails. Guessing awards you 1.95x the currency you've bet (rounded up). Multiplier can be changed by the bot owner.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".bf 5 heads\n.bf 3 t"
+  },
+  {
+    "name": ".shopGambling",
+    "description": "Lists this server's administrators' shop. Paginated.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".shop\n.shop 2"
+  },
+  {
+    "name": ".buyGambling",
+    "description": "Buys an item from the shop on a given index. If buying items, make sure that the bot can DM you.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".buy 2"
+  },
+  {
+    "name": ".shopaddGambling",
+    "description": "Adds an item to the shop by specifying type price and name. Available types are role and list. 90% of currency from each purchase will be received by the user who added the item to the shop.RequiresAdministrator Server Permission",
+    "module": "Gambling",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".shopadd role 1000 Rich"
+  },
+  {
+    "name": ".shoplistaddGambling",
+    "description": "Adds an item to the list of items for sale in the shop entry given the index. You usually want to run this command in the secret channel, so that the unique items are not leaked.RequiresAdministrator Server Permission",
+    "module": "Gambling",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".shoplistadd 1 Uni-que-Steam-Key"
+  },
+  {
+    "name": ".shopremGambling",
+    "description": "Removes an item from the shop by its ID.RequiresAdministrator Server Permission",
+    "module": "Gambling",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".shoprm 1"
+  },
+  {
+    "name": ".slotstatsGambling",
+    "description": "Shows the total stats of the slot command for this bot's session.RequiresBot Owner Only",
+    "module": "Gambling",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".slotstats"
+  },
+  {
+    "name": ".slottestGambling",
+    "description": "Tests to see how much slots payout for X number of plays.RequiresBot Owner Only",
+    "module": "Gambling",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".slottest 1000"
+  },
+  {
+    "name": ".slotGambling",
+    "description": "Play Nadeko slots. Max bet is 9999. 1.5 second cooldown per user.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".slot 5"
+  },
+  {
+    "name": ".waifuresetGambling",
+    "description": "Resets your waifu stats, except current waifus.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".waifureset"
+  },
+  {
+    "name": ".claimwaifuGambling",
+    "description": "Claim a waifu for yourself by spending currency.  You must spend at least 10% more than her current value unless she set .affinity towards you.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".claim 50 @Himesama"
+  },
+  {
+    "name": ".waifutransferGambling",
+    "description": "Transfer the ownership of one of your waifus to another user. You must pay 10% of your waifu's value.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".waifutransfer @ExWaifu @NewOwner"
+  },
+  {
+    "name": ".divorceGambling",
+    "description": "Releases your claim on a specific waifu. You will get some of the money you've spent back unless that waifu has an affinity towards you. 6 hours cooldown.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".divorce @CheatingSloot"
+  },
+  {
+    "name": ".affinityGambling",
+    "description": "Sets your affinity towards someone you want to be claimed by. Setting affinity will reduce their .claim on you by 20%. Provide no parameters to clear your affinity. 30 minutes cooldown.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".affinity @MyHusband\n.affinity"
+  },
+  {
+    "name": ".waifusGambling",
+    "description": "Shows top 9 waifus. You can specify another page to show other waifus.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".waifus\n.waifulb 3"
+  },
+  {
+    "name": ".waifuinfoGambling",
+    "description": "Shows waifu stats for a target person. Defaults to you if no user is provided.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".waifuinfo @MyCrush\n.waifuinfo"
+  },
+  {
+    "name": ".waifugiftGambling",
+    "description": "Gift an item to someone. This will increase their waifu value by 50% of the gifted item's value if you are not their waifu, or 95% if you are. Provide no parameters to see a list of items that you can gift.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".gifts\n.gift Rose @Himesama"
+  },
+  {
+    "name": ".wheeloffortuneGambling",
+    "description": "Bets a certain amount of currency on the wheel of fortune. Wheel can stop on one of many different multipliers. Won amount is rounded down to the nearest whole number.",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": ".wheel 10"
+  },
+  {
+    "name": ".wheeltestGambling",
+    "description": "wheeltest",
+    "module": "Gambling",
+    "permissions": [],
+    "usage": "wheeltest"
+  },
+  {
+    "name": ".chooseGames",
+    "description": "Chooses a thing from a list of things",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".choose Get up;Sleep;Sleep more"
+  },
+  {
+    "name": ".8ballGames",
+    "description": "Ask the 8ball a yes/no question.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".8ball Is b1nzy a nice guy?"
+  },
+  {
+    "name": ".rategirlGames",
+    "description": "Use the universal hot-crazy wife zone matrix to determine the girl's worth. It is everything young men need to know about women. At any moment in time, any woman you have previously located on this chart can vanish from that location and appear anywhere else on the chart.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".rategirl @SomeGurl"
+  },
+  {
+    "name": ".linuxGames",
+    "description": "Prints a customizable Linux interjection",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".linux Spyware Windows"
+  },
+  {
+    "name": ".acrophobiaGames",
+    "description": "Starts an Acrophobia game. Options --submission-time (-s)   Time after which the submissions are closed and voting starts.--vote-time (-v)   Time after which the voting is closed and the winner is declared.  ",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".acro\n.acro -s 30"
+  },
+  {
+    "name": ".cleverbotGames",
+    "description": "Toggles cleverbot session. When enabled, the bot will reply to messages starting with bot mention in the server. Custom reactions starting with %mention% won't work if cleverbot is enabled.RequiresManageMessages Server Permission",
+    "module": "Games",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".cleverbot"
+  },
+  {
+    "name": ".hangmanlistGames",
+    "description": "Shows a list of hangman term types.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".hangmanlist"
+  },
+  {
+    "name": ".hangmanGames",
+    "description": "Starts a game of hangman in the channel. Use .hangmanlist to see a list of available term types. Defaults to 'all'.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".hangman\n.hangman movies"
+  },
+  {
+    "name": ".hangmanstopGames",
+    "description": "Stops the active hangman game on this channel if it exists.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".hangmanstop"
+  },
+  {
+    "name": ".leetGames",
+    "description": "Converts a text to leetspeak with 6 (1-6) severity levels",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".leet 3 Hello"
+  },
+  {
+    "name": ".nunchiGames",
+    "description": "Creates or joins an existing nunchi game. Users have to count up by 1 from the starting number shown by the bot. If someone makes a mistake (types an incorrect number, or repeats the same number) they are out of the game and a new round starts without them.  Minimum 3 users required.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".nunchi"
+  },
+  {
+    "name": ".pickGames",
+    "description": "Picks the currency planted in this channel. If the plant has a password, you need to specify it.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".pick\n.pick passwd"
+  },
+  {
+    "name": ".plantGames",
+    "description": "Spend an amount of currency to plant it in this channel. Default is 1. You can specify the password after the amount. Password has to be alphanumeric and it will be trimmed down to 10 characters if it's longer.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".plant 5\n.plant 10 meow"
+  },
+  {
+    "name": ".gencurrencyGames",
+    "description": "Toggles currency generation on this channel. Every posted message will have chance to spawn currency. Chance is specified by the Bot Owner. (default is 2%)RequiresManageMessages Server Permission",
+    "module": "Games",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".gc"
+  },
+  {
+    "name": ".gencurlistGames",
+    "description": "Shows the list of server and channel ids where gc is enabled. Paginated with 9 per page.RequiresManageMessages Server PermissionBot Owner Only",
+    "module": "Games",
+    "permissions": [
+      "ManageMessages Server Permission",
+      "Bot Owner Only"
+    ],
+    "usage": ".gclist"
+  },
+  {
+    "name": ".pollGames",
+    "description": "Creates a public poll which requires users to type a number of the voting option in the channel command is ran in.RequiresManageMessages Server Permission",
+    "module": "Games",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".ppoll Question?;Answer1;Answ 2;A_3"
+  },
+  {
+    "name": ".pollstatsGames",
+    "description": "Shows the poll results without stopping the poll on this server.RequiresManageMessages Server Permission",
+    "module": "Games",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".pollstats"
+  },
+  {
+    "name": ".pollendGames",
+    "description": "Stops active poll on this server and prints the results in this channel.RequiresManageMessages Server Permission",
+    "module": "Games",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".pollend"
+  },
+  {
+    "name": ".typestartGames",
+    "description": "Starts a typing contest. Options --start-time (-s)   How long does it take for the race to start. Default 5.  ",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".typestart"
+  },
+  {
+    "name": ".typestopGames",
+    "description": "Stops a typing contest on the current channel.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".typestop"
+  },
+  {
+    "name": ".typeaddGames",
+    "description": "Adds a new article to the typing contest.RequiresBot Owner Only",
+    "module": "Games",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".typeadd wordswords"
+  },
+  {
+    "name": ".typelistGames",
+    "description": "Lists added typing articles with their IDs. 15 per page.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".typelist\n.typelist 3"
+  },
+  {
+    "name": ".typedelGames",
+    "description": "Deletes a typing article given the ID.RequiresBot Owner Only",
+    "module": "Games",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".typedel 3"
+  },
+  {
+    "name": ".tictactoeGames",
+    "description": "Starts a game of tic tac toe. Another user must run the command in the same channel in order to accept the challenge. Use numbers 1-9 to play. Options --turn-timer (-t)   Turn time in seconds. Default 15.  ",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".ttt"
+  },
+  {
+    "name": ".triviaGames",
+    "description": "Starts a game of trivia. You can add nohint to prevent hints. First player to get to 10 points wins by default. You can specify a different number. 30 seconds per question. Options --pokemon (-p)   Whether it's 'Who's that pokemon?' trivia.--nohint   Don't show any hints.--win-req (-w)   Winning requirement. Set 0 for an infinite game. Default 10.--question-timer (-q)   How long until the question ends. Default 30.--timeout (-t)   Number of questions of inactivity in order stop. Set 0 for never. Default 10.  ",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".t\n.t --timeout 5 -p -w 3 -q 10"
+  },
+  {
+    "name": ".tlGames",
+    "description": "Shows a current trivia leaderboard.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".tl"
+  },
+  {
+    "name": ".tqGames",
+    "description": "Quits current trivia after current question.",
+    "module": "Games",
+    "permissions": [],
+    "usage": ".tq"
+  },
+  {
+    "name": ".modulesHelp",
+    "description": "Lists all bot modules.",
+    "module": "Help",
+    "permissions": [],
+    "usage": ".modules"
+  },
+  {
+    "name": ".commandsHelp",
+    "description": "List all of the bot's commands from a certain module. You can either specify the full name or only the first few letters of the module name. Options --view (-v)   Specifies how to output the list of commands. 0 - Hide commands which you can't use, 1 - Cross out commands which you can't use, 2 - Show all.  ",
+    "module": "Help",
+    "permissions": [],
+    "usage": ".cmds Admin\n.cmds Admin --view 1"
+  },
+  {
+    "name": ".helpHelp",
+    "description": "Either shows a help for a single command, or DMs you help link if no parameters are specified.",
+    "module": "Help",
+    "permissions": [],
+    "usage": ".h .cmds\n.h"
+  },
+  {
+    "name": ".hgitHelp",
+    "description": "Generates the commandlist.md file.RequiresBot Owner Only",
+    "module": "Help",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".hgit"
+  },
+  {
+    "name": ".readmeHelp",
+    "description": "Sends a readme and a guide links to the channel.",
+    "module": "Help",
+    "permissions": [],
+    "usage": ".readme\n.guide"
+  },
+  {
+    "name": ".donateHelp",
+    "description": "Instructions for helping the project financially.",
+    "module": "Help",
+    "permissions": [],
+    "usage": ".donate"
+  },
+  {
+    "name": ".playMusic",
+    "description": "If no parameters are specified, acts as .next 1 command. If you specify a song number, it will jump to that song. If you specify a search query, acts as a .q command",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".play\n.play 5\n.play Dream Of Venice"
+  },
+  {
+    "name": ".queueMusic",
+    "description": "Queue a song using keywords or a link. Bot will join your voice channel. You must be in a voice channel.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".q Dream Of Venice"
+  },
+  {
+    "name": ".queuenextMusic",
+    "description": "Works the same as .queue command, except it enqueues the new song after the current one. You must be in a voice channel.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".qn Dream Of Venice"
+  },
+  {
+    "name": ".queuesearchMusic",
+    "description": "Search for top 5 youtube song result using keywords, and type the index of the song to play that song. Bot will join your voice channel. You must be in a voice channel.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".qs Dream Of Venice"
+  },
+  {
+    "name": ".listqueueMusic",
+    "description": "Lists 10 currently queued songs per page. Default page is 1.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".lq\n.lq 2"
+  },
+  {
+    "name": ".nextMusic",
+    "description": "Goes to the next song in the queue. You have to be in the same voice channel as the bot. You can skip multiple songs, but in that case songs will not be requeued if .rcs or .rpl is enabled.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".n\n.n 5"
+  },
+  {
+    "name": ".stopMusic",
+    "description": "Stops the music and preserves the current song index. Stays in the channel.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".s"
+  },
+  {
+    "name": ".autodisconnectMusic",
+    "description": "Toggles whether the bot should disconnect from the voice channel once it's done playing all of the songs.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".autodc"
+  },
+  {
+    "name": ".destroyMusic",
+    "description": "Completely stops the music and unbinds the bot from the channel. (may cause weird behaviour)",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".d"
+  },
+  {
+    "name": ".pauseMusic",
+    "description": "Pauses or Unpauses the song.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".p"
+  },
+  {
+    "name": ".volumeMusic",
+    "description": "Sets the music playback volume (0-100%)",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".vol 50"
+  },
+  {
+    "name": ".defvolMusic",
+    "description": "Sets the default music volume when music playback is started (0-100). Persists through restarts.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".dv 80"
+  },
+  {
+    "name": ".songremoveMusic",
+    "description": "Remove a song by its # in the queue, or 'all' to remove all songs from the queue and reset the song index.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".srm 5"
+  },
+  {
+    "name": ".playlistsMusic",
+    "description": "Lists all playlists. Paginated, 20 per page.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".pls 1"
+  },
+  {
+    "name": ".deleteplaylistMusic",
+    "description": "Deletes a saved playlist using its id. Works only if you made it or if you are the bot owner.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".delpls 5"
+  },
+  {
+    "name": ".playlistshowMusic",
+    "description": "Lists all songs in a playlist spepcified by its id. Paginated, 20 per page.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".plshow 1"
+  },
+  {
+    "name": ".saveMusic",
+    "description": "Saves a playlist under a certain name. Playlist name must be no longer than 20 characters and must not contain dashes.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".save classical1"
+  },
+  {
+    "name": ".loadMusic",
+    "description": "Loads a saved playlist using its ID. Use .pls to list all saved playlists and .save to save new ones.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".load 5"
+  },
+  {
+    "name": ".fairplayMusic",
+    "description": "Toggles fairplay. While enabled, the bot will prioritize songs from users who didn't have their song recently played instead of the song's position in the queue.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".fp"
+  },
+  {
+    "name": ".songautodeleteMusic",
+    "description": "Toggles whether the song should be automatically removed from the music queue when it finishes playing.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".sad"
+  },
+  {
+    "name": ".soundcloudqueueMusic",
+    "description": "Queue a soundcloud song using keywords. Bot will join your voice channel. You must be in a voice channel.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".sq Dream Of Venice"
+  },
+  {
+    "name": ".soundcloudplMusic",
+    "description": "Queue a Soundcloud playlist using a link.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".scpl soundcloudseturl"
+  },
+  {
+    "name": ".nowplayingMusic",
+    "description": "Shows the song that the bot is currently playing.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".np"
+  },
+  {
+    "name": ".shuffleMusic",
+    "description": "Shuffles the current playlist.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".plsh"
+  },
+  {
+    "name": ".playlistMusic",
+    "description": "Queues up to 500 songs from a youtube playlist specified by a link, or keywords.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".pl <youtube_playlist_link>"
+  },
+  {
+    "name": ".radioMusic",
+    "description": "Queues a radio stream from a link. It can be a direct mp3 radio stream, .m3u, .pls .asx or .xspf (Usage Video: https://streamable.com/al54)",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".ra radio link here"
+  },
+  {
+    "name": ".localMusic",
+    "description": "Queues a local file by specifying a full path.RequiresBot Owner Only",
+    "module": "Music",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".lo C:/music/mysong.mp3"
+  },
+  {
+    "name": ".localplaylstMusic",
+    "description": "Queues all songs from a directory.RequiresBot Owner Only",
+    "module": "Music",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".lopl C:/music/classical"
+  },
+  {
+    "name": ".moveMusic",
+    "description": "Moves the bot to your voice channel. (works only if music is already playing)",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".mv"
+  },
+  {
+    "name": ".movesongMusic",
+    "description": "Moves a song from one position to another.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".ms 5>3"
+  },
+  {
+    "name": ".setmaxqueueMusic",
+    "description": "Sets a maximum queue size. Specify no parameters to have no limit.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".smq 50\n.smq"
+  },
+  {
+    "name": ".setmaxplaytimeMusic",
+    "description": "Sets a maximum number of seconds (>14) a song can run before being skipped automatically. Set 0 to have no limit.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".smp 0\n.smp 270"
+  },
+  {
+    "name": ".reptcursongMusic",
+    "description": "Toggles repeat of current song.",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".rcs"
+  },
+  {
+    "name": ".rpeatplaylstMusic",
+    "description": "Toggles repeat of all songs in the queue (every song that finishes is added to the end of the queue).",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".rpl"
+  },
+  {
+    "name": ".autoplayMusic",
+    "description": "Toggles autoplay - When the song is finished, automatically queue a related Youtube song. (Works only for Youtube songs and when queue is empty)",
+    "module": "Music",
+    "permissions": [],
+    "usage": ".ap"
+  },
+  {
+    "name": ".setmusicchannelMusic",
+    "description": "Sets the current channel as the default music output channel. This will output playing, finished, paused and removed songs to that channel instead of the channel where the first song was queued in.RequiresManageMessages Server Permission",
+    "module": "Music",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".smch"
+  },
+  {
+    "name": ".unsetmusicchannelMusic",
+    "description": "Bot will output playing, finished, paused and removed songs to the channel where the first song was queued in.RequiresManageMessages Server Permission",
+    "module": "Music",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".smch"
+  },
+  {
+    "name": ".autohentaiNSFW",
+    "description": "Posts a hentai every X seconds with a random tag from the provided tags. Use | to separate tag groups. Random group will be chosen every time the image is sent. Use + for multiple tags (max 2 per group). 20 seconds minimum. Provide no parameters to disable.RequiresManageMessages Channel Permission",
+    "module": "NSFW",
+    "permissions": [
+      "ManageMessages Channel Permission"
+    ],
+    "usage": ".autohentai 30 yuri+kissing|tail+long_hair\n.autohentai"
+  },
+  {
+    "name": ".autoboobsNSFW",
+    "description": "Posts a boobs every X seconds. 20 seconds minimum. Provide no parameters to disable.RequiresManageMessages Channel Permission",
+    "module": "NSFW",
+    "permissions": [
+      "ManageMessages Channel Permission"
+    ],
+    "usage": ".autoboobs 30\n.autoboobs"
+  },
+  {
+    "name": ".autobuttsNSFW",
+    "description": "Posts a butt every X seconds. 20 seconds minimum. Provide no parameters to disable.RequiresManageMessages Channel Permission",
+    "module": "NSFW",
+    "permissions": [
+      "ManageMessages Channel Permission"
+    ],
+    "usage": ".autobutts 30\n.autobutts"
+  },
+  {
+    "name": ".hentaiNSFW",
+    "description": "Shows a hentai image from a random website (gelbooru or danbooru or konachan or atfbooru or yandere) with a given tag. Tag is optional but preferred. Only 1 tag allowed.",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".hentai yuri"
+  },
+  {
+    "name": ".hentaibombNSFW",
+    "description": "Shows a total 5 images (from gelbooru, danbooru, konachan, yandere and atfbooru). Tag is optional but preferred.",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".hentaibomb yuri"
+  },
+  {
+    "name": ".yandereNSFW",
+    "description": "Shows a random image from yandere with a given tag. Tag is optional but preferred. (multiple tags are appended with +)",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".yandere tag1+tag2"
+  },
+  {
+    "name": ".konachanNSFW",
+    "description": "Shows a random hentai image from konachan with a given tag. Tag is optional but preferred.",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".konachan yuri"
+  },
+  {
+    "name": ".e621NSFW",
+    "description": "Shows a random hentai image from e621.net with a given tag. Tag is optional but preferred. (multiple tags are appended with +)",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".e621 yuri+kissing"
+  },
+  {
+    "name": ".rule34NSFW",
+    "description": "Shows a random image from rule34.xx with a given tag. Tag is optional but preferred. (multiple tags are appended with +)",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".rule34 yuri+kissing"
+  },
+  {
+    "name": ".danbooruNSFW",
+    "description": "Shows a random hentai image from danbooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".danbooru yuri+kissing"
+  },
+  {
+    "name": ".gelbooruNSFW",
+    "description": "Shows a random hentai image from gelbooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".gelbooru yuri+kissing"
+  },
+  {
+    "name": ".derpibooruNSFW",
+    "description": "Shows a random image from derpibooru with a given tag. Tag is optional but preferred.",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".derpi yuri+kissing"
+  },
+  {
+    "name": ".boobsNSFW",
+    "description": "Real adult content.",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".boobs"
+  },
+  {
+    "name": ".buttsNSFW",
+    "description": "Real adult content.",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".butts\n.ass"
+  },
+  {
+    "name": ".nsfwtagblNSFW",
+    "description": "Toggles whether the tag is blacklisted or not in nsfw searches. Provide no parameters to see the list of blacklisted tags.",
+    "module": "NSFW",
+    "permissions": [],
+    "usage": ".nsfwtbl poop"
+  },
+  {
+    "name": ".nsfwccNSFW",
+    "description": "Clears nsfw cache.RequiresBot Owner Only",
+    "module": "NSFW",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".nsfwcc"
+  },
+  {
+    "name": ".verbosePermissions",
+    "description": "Sets whether to show when a command/module is blocked.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".verbose true"
+  },
+  {
+    "name": ".permrolePermissions",
+    "description": "Sets a role which can change permissions. Supply no parameters to see the current one. Type 'reset' instead of the role name to reset the currently set permission role. Users with Administrator server permissions can use permission commands regardless of whether they have the specified role. There is no default permission role.RequiresAdministrator Server Permission",
+    "module": "Permissions",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".pr Some Role\n.pr reset"
+  },
+  {
+    "name": ".listpermsPermissions",
+    "description": "Lists whole permission chain with their indexes. You can specify an optional page number if there are a lot of permissions.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".lp\n.lp 3"
+  },
+  {
+    "name": ".removepermPermissions",
+    "description": "Removes a permission from a given position in the Permissions list.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".rp 1"
+  },
+  {
+    "name": ".movepermPermissions",
+    "description": "Moves permission from one position to another in the Permissions list.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".mp 2 4"
+  },
+  {
+    "name": ".srvrcmdPermissions",
+    "description": "Sets a command's permission at the server level.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".sc \"command name\" disable"
+  },
+  {
+    "name": ".srvrmdlPermissions",
+    "description": "Sets a module's permission at the server level.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".sm ModuleName enable"
+  },
+  {
+    "name": ".usrcmdPermissions",
+    "description": "Sets a command's permission at the user level.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".uc \"command name\" enable SomeUsername"
+  },
+  {
+    "name": ".usrmdlPermissions",
+    "description": "Sets a module's permission at the user level.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".um ModuleName enable SomeUsername"
+  },
+  {
+    "name": ".rolecmdPermissions",
+    "description": "Sets a command's permission at the role level.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".rc \"command name\" disable MyRole"
+  },
+  {
+    "name": ".rolemdlPermissions",
+    "description": "Sets a module's permission at the role level.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".rm ModuleName enable MyRole"
+  },
+  {
+    "name": ".chnlcmdPermissions",
+    "description": "Sets a command's permission at the channel level.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".cc \"command name\" enable SomeChannel"
+  },
+  {
+    "name": ".chnlmdlPermissions",
+    "description": "Sets a module's permission at the channel level.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".cm ModuleName enable SomeChannel"
+  },
+  {
+    "name": ".allchnlmdlsPermissions",
+    "description": "Enable or disable all modules in a specified channel.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".acm enable #SomeChannel"
+  },
+  {
+    "name": ".allrolemdlsPermissions",
+    "description": "Enable or disable all modules for a specific role.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".arm [enable/disable] MyRole"
+  },
+  {
+    "name": ".allusrmdlsPermissions",
+    "description": "Enable or disable all modules for a specific user.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".aum enable @someone"
+  },
+  {
+    "name": ".allsrvrmdlsPermissions",
+    "description": "Enable or disable all modules for your server.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".asm [enable/disable]"
+  },
+  {
+    "name": ".ublPermissions",
+    "description": "Either [add]s or [rem]oves a user specified by a Mention or an ID from a blacklist.RequiresBot Owner Only",
+    "module": "Permissions",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".ubl add @SomeUser\n.ubl rem 12312312313"
+  },
+  {
+    "name": ".cblPermissions",
+    "description": "Either [add]s or [rem]oves a channel specified by an ID from a blacklist.RequiresBot Owner Only",
+    "module": "Permissions",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".cbl rem 12312312312"
+  },
+  {
+    "name": ".sblPermissions",
+    "description": "Either [add]s or [rem]oves a server specified by a Name or an ID from a blacklist.RequiresBot Owner Only",
+    "module": "Permissions",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".sbl add 12312321312\n.sbl rem SomeTrashServer"
+  },
+  {
+    "name": ".cmdcooldownPermissions",
+    "description": "Sets a cooldown per user for a command. Set it to 0 to remove the cooldown.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".cmdcd \"some cmd\" 5"
+  },
+  {
+    "name": ".allcmdcooldownsPermissions",
+    "description": "Shows a list of all commands and their respective cooldowns.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".acmdcds"
+  },
+  {
+    "name": ".fwclearPermissions",
+    "description": "Deletes all filtered words on this server.RequiresAdministrator Server Permission",
+    "module": "Permissions",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".fwclear"
+  },
+  {
+    "name": ".srvrfilterinvPermissions",
+    "description": "Toggles automatic deletion of invites posted in the server. Does not affect the Bot Owner.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".sfi"
+  },
+  {
+    "name": ".chnlfilterinvPermissions",
+    "description": "Toggles automatic deletion of invites posted in the channel. Does not negate the .srvrfilterinv enabled setting. Does not affect the Bot Owner.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".cfi"
+  },
+  {
+    "name": ".srvrfilterwordsPermissions",
+    "description": "Toggles automatic deletion of messages containing filtered words on the server. Does not affect the Bot Owner.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".sfw"
+  },
+  {
+    "name": ".chnlfilterwordsPermissions",
+    "description": "Toggles automatic deletion of messages containing filtered words on the channel. Does not negate the .srvrfilterwords enabled setting. Does not affect the Bot Owner.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".cfw"
+  },
+  {
+    "name": ".fwPermissions",
+    "description": "Adds or removes (if it exists) a word from the list of filtered words. Use.sfw or .cfw to toggle filtering.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".fw poop"
+  },
+  {
+    "name": ".lstfilterwordsPermissions",
+    "description": "Shows a list of filtered words.",
+    "module": "Permissions",
+    "permissions": [],
+    "usage": ".lfw"
+  },
+  {
+    "name": ".listglobalpermsPermissions",
+    "description": "Lists global permissions set by the bot owner.RequiresBot Owner Only",
+    "module": "Permissions",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".lgp"
+  },
+  {
+    "name": ".globalmodulePermissions",
+    "description": "Toggles whether a module can be used on any server.RequiresBot Owner Only",
+    "module": "Permissions",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".gmod nsfw"
+  },
+  {
+    "name": ".globalcommandPermissions",
+    "description": "Toggles whether a command can be used on any server.RequiresBot Owner Only",
+    "module": "Permissions",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".gcmd .stats"
+  },
+  {
+    "name": ".resetpermsPermissions",
+    "description": "Resets the bot's permissions module on this server to the default value.RequiresAdministrator Server Permission",
+    "module": "Permissions",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".resetperms"
+  },
+  {
+    "name": ".resetglobalpermsPermissions",
+    "description": "Resets global permissions set by bot owner.RequiresBot Owner Only",
+    "module": "Permissions",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".resetglobalperms"
+  },
+  {
+    "name": ".lolbanSearches",
+    "description": "Shows top banned champions ordered by ban rate.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".lolban"
+  },
+  {
+    "name": ".ripSearches",
+    "description": "rip",
+    "module": "Searches",
+    "permissions": [],
+    "usage": "rip"
+  },
+  {
+    "name": ".saySearches",
+    "description": "Bot will send the message you typed in this channel. Supports embeds.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".say hi"
+  },
+  {
+    "name": ".weatherSearches",
+    "description": "Shows weather data for a specified city. You can also specify a country after a comma.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".we Moscow, RU"
+  },
+  {
+    "name": ".timeSearches",
+    "description": "Shows the current time and timezone in the specified location.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".time London, UK"
+  },
+  {
+    "name": ".youtubeSearches",
+    "description": "Searches youtubes and shows the first result",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".yt query"
+  },
+  {
+    "name": ".movieSearches",
+    "description": "Queries omdb for movies or series, show first result.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".imdb Batman vs Superman"
+  },
+  {
+    "name": ".randomcatSearches",
+    "description": "Shows a random cat image.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".meow"
+  },
+  {
+    "name": ".randomdogSearches",
+    "description": "Shows a random dog image.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".woof"
+  },
+  {
+    "name": ".randomfoodSearches",
+    "description": "Shows a random food image.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".yum"
+  },
+  {
+    "name": ".randombirdSearches",
+    "description": "Shows a random bird image.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".birb"
+  },
+  {
+    "name": ".imageSearches",
+    "description": "Pulls a random image using a search parameter.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".rimg cute kitten"
+  },
+  {
+    "name": ".lmgtfySearches",
+    "description": "Google something for an idiot.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".lmgtfy query"
+  },
+  {
+    "name": ".shortenSearches",
+    "description": "Attempts to shorten an URL, if it fails, returns the input URL.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".shorten https://google.com"
+  },
+  {
+    "name": ".googleSearches",
+    "description": "Get a Google search link for some terms.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".google query"
+  },
+  {
+    "name": ".magicthegatheringSearches",
+    "description": "Searches for a Magic The Gathering card.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".magicthegathering about face\n.mtg about face"
+  },
+  {
+    "name": ".hearthstoneSearches",
+    "description": "Searches for a Hearthstone card and shows its image. Takes a while to complete.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".hs Ysera"
+  },
+  {
+    "name": ".urbandictSearches",
+    "description": "Searches Urban Dictionary for a word.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".ud Pineapple"
+  },
+  {
+    "name": ".defineSearches",
+    "description": "Finds a definition of a word.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".def heresy"
+  },
+  {
+    "name": ".#Searches",
+    "description": "Searches Tagdef.com for a hashtag.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".# ff"
+  },
+  {
+    "name": ".catfactSearches",
+    "description": "Shows a random catfact from http://catfacts-api.appspot.com/api/facts",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".catfact"
+  },
+  {
+    "name": ".revavSearches",
+    "description": "Returns a Google reverse image search for someone's avatar.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".revav @SomeGuy"
+  },
+  {
+    "name": ".revimgSearches",
+    "description": "Returns a Google reverse image search for an image from a link.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".revimg Image link"
+  },
+  {
+    "name": ".safebooruSearches",
+    "description": "Shows a random image from safebooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".safebooru yuri+kissing"
+  },
+  {
+    "name": ".wikipediaSearches",
+    "description": "Gives you back a wikipedia link",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".wiki query"
+  },
+  {
+    "name": ".colorSearches",
+    "description": "Shows you pictures of colors which correspond to the inputed hex values. Max 10.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".color 00ff00\n.color f00 0f0 00f"
+  },
+  {
+    "name": ".avatarSearches",
+    "description": "Shows a mentioned person's avatar.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".av @SomeGuy"
+  },
+  {
+    "name": ".wikiaSearches",
+    "description": "Gives you back a wikia link",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".wikia mtg Vigilance\n.wikia mlp Dashy"
+  },
+  {
+    "name": ".bibleSearches",
+    "description": "Shows bible verse. You need to supply book name and chapter:verse",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".bible genesis 3:19"
+  },
+  {
+    "name": ".novelSearches",
+    "description": "Searches for a novel on http://novelupdates.com/. You have to provide an exact name.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".novel the nine cauldrons"
+  },
+  {
+    "name": ".malSearches",
+    "description": "Shows basic info from a MyAnimeList profile.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".mal straysocks"
+  },
+  {
+    "name": ".animeSearches",
+    "description": "Queries anilist for an anime and shows the first result.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".ani aquarion evol"
+  },
+  {
+    "name": ".mangaSearches",
+    "description": "Queries anilist for a manga and shows the first result.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".mq Shingeki no kyojin"
+  },
+  {
+    "name": ".cryptoSearches",
+    "description": "Shows basic stats about a cryptocurrency from coinmarketcap.com. You can use either a name or an abbreviation of the currency.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".c btc\n.c bitcoin"
+  },
+  {
+    "name": ".feedSearches",
+    "description": "Subscribes to a feed. Bot will post an update up to once every 10 seconds. You can have up to 10 feeds on one server. All feeds must have unique URLs.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".feed https://www.rt.com/rss/"
+  },
+  {
+    "name": ".feedremoveSearches",
+    "description": "Stops tracking a feed on the given index. Use .feeds command to see a list of feeds and their indexes.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".feedremove 3"
+  },
+  {
+    "name": ".feedsSearches",
+    "description": "Shows the list of feeds you've subscribed to on this server.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".feeds"
+  },
+  {
+    "name": ".yomamaSearches",
+    "description": "Shows a random joke from http://api.yomomma.info/",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".ym"
+  },
+  {
+    "name": ".randjokeSearches",
+    "description": "Shows a random joke from http://tambal.azurewebsites.net/joke/random",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".rj"
+  },
+  {
+    "name": ".chucknorrisSearches",
+    "description": "Shows a random Chuck Norris joke from http://api.icndb.com/jokes/random/",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".cn"
+  },
+  {
+    "name": ".wowjokeSearches",
+    "description": "Get one of Kwoth's penultimate WoW jokes.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".wowjoke"
+  },
+  {
+    "name": ".magicitemSearches",
+    "description": "Shows a random magic item from https://1d4chan.org/wiki/List_of_/tg/%27s_magic_items",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".mi"
+  },
+  {
+    "name": ".memelistSearches",
+    "description": "Pulls a list of memes you can use with .memegen from http://memegen.link/templates/",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".memelist"
+  },
+  {
+    "name": ".memegenSearches",
+    "description": "Generates a meme from memelist with top and bottom text.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".memegen biw \"gets iced coffee\" \"in the winter\""
+  },
+  {
+    "name": ".osuSearches",
+    "description": "Shows osu stats for a player.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".osu Name\n.osu Name taiko"
+  },
+  {
+    "name": ".osubSearches",
+    "description": "Shows information about an osu beatmap.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".osub https://osu.ppy.sh/s/127712"
+  },
+  {
+    "name": ".osu5Searches",
+    "description": "Displays a user's top 5 plays.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".osu5 Name"
+  },
+  {
+    "name": ".overwatchSearches",
+    "description": "Show's basic stats on a player (competitive rank, playtime, level etc) Region codes are: eu us cn kr",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".ow us Battletag#1337\n.overwatch eu Battletag#2016"
+  },
+  {
+    "name": ".pathofexileSearches",
+    "description": "Searches characters for a given Path of Exile account. May specify league name to filter results.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".poe \"Zizaran\""
+  },
+  {
+    "name": ".pathofexileleaguesSearches",
+    "description": "Returns a list of the main Path of Exile leagues.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".poel"
+  },
+  {
+    "name": ".pathofexilecurrencySearches",
+    "description": "Returns the chaos equivalent of a given currency or exchange rate between two currencies.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".poec Standard \"Mirror of Kalandra\""
+  },
+  {
+    "name": ".pathofexileitemSearches",
+    "description": "Searches for a Path of Exile item from the Path of Exile GamePedia.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".poei \"Quill Rain\""
+  },
+  {
+    "name": ".placelistSearches",
+    "description": "Shows the list of available tags for the .place command.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".placelist"
+  },
+  {
+    "name": ".placeSearches",
+    "description": "Shows a placeholder image of a given tag. Use .placelist to see all available tags. You can specify the width and height of the image as the last two optional parameters.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".place Cage\n.place steven 500 400"
+  },
+  {
+    "name": ".pokemonSearches",
+    "description": "Searches for a pokemon.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".poke Sylveon"
+  },
+  {
+    "name": ".pokemonabilitySearches",
+    "description": "Searches for a pokemon ability.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".pokeab overgrow"
+  },
+  {
+    "name": ".smashcastSearches",
+    "description": "Notifies this channel when the specified user starts streaming.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".smashcast SomeStreamer"
+  },
+  {
+    "name": ".twitchSearches",
+    "description": "Notifies this channel when the specified user starts streaming.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".twitch SomeStreamer"
+  },
+  {
+    "name": ".picartoSearches",
+    "description": "Notifies this channel when the specified user starts streaming.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".picarto SomeStreamer"
+  },
+  {
+    "name": ".mixerSearches",
+    "description": "Notifies this channel when the specified user starts streaming.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".mixer SomeStreamer"
+  },
+  {
+    "name": ".streamaddSearches",
+    "description": "Notifies this channel when the user's stream on the specified URL goes online or offline.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".stadd twitch.tv/someguy"
+  },
+  {
+    "name": ".streamremoveSearches",
+    "description": "Removes notifications of a specified stream on the specified platform on this channel. You can also just specify an url.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".strm Twitch SomeGuy\n.strm twitch.tv/someguy"
+  },
+  {
+    "name": ".streamsclearSearches",
+    "description": "Deletes all followed streams on this server.RequiresAdministrator Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".streamsclear"
+  },
+  {
+    "name": ".liststreamsSearches",
+    "description": "Lists all streams you are following on this server.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".ls"
+  },
+  {
+    "name": ".streamoffSearches",
+    "description": "Toggles whether the bot will notify about streams going offline.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".stoff"
+  },
+  {
+    "name": ".streammsgSearches",
+    "description": "Specify an url of a stream you're already following, and a message in order to set a stream notification message which will show up every time stream comes online.RequiresManageMessages Server Permission",
+    "module": "Searches",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".streammsg https://www.twitch.tv/trolhamonas/ Hello world"
+  },
+  {
+    "name": ".checkstreamSearches",
+    "description": "Checks if a user is online on a certain streaming platform.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".cs twitch MyFavStreamer"
+  },
+  {
+    "name": ".translateSearches",
+    "description": "Translates from>to text. From the given language to the destination language.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".trans en>fr Hello"
+  },
+  {
+    "name": ".autotransSearches",
+    "description": "Starts automatic translation of all messages by users who set their .atl in this channel. You can set \"del\" parameter to automatically delete all translated user messages.RequiresAdministrator Server PermissionBot Owner Only",
+    "module": "Searches",
+    "permissions": [
+      "Administrator Server Permission",
+      "Bot Owner Only"
+    ],
+    "usage": ".at\n.at del"
+  },
+  {
+    "name": ".autotranslangSearches",
+    "description": "Sets your source and target language to be used with .at. Specify no parameters to remove previously set value.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".atl en>fr"
+  },
+  {
+    "name": ".translangsSearches",
+    "description": "Lists the valid languages for translation.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".translangs"
+  },
+  {
+    "name": ".xkcdSearches",
+    "description": "Shows a XKCD comic. Specify no parameters to retrieve a random one. Number parameter will retrieve a specific comic, and \"latest\" will get the latest one.",
+    "module": "Searches",
+    "permissions": [],
+    "usage": ".xkcd\n.xkcd 1400\n.xkcd latest"
+  },
+  {
+    "name": ".togethertubeUtility",
+    "description": "Creates a new room on https://togethertube.com and shows the link in the chat.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".totube"
+  },
+  {
+    "name": ".whosplayingUtility",
+    "description": "Shows a list of users who are playing the specified game.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".whpl Overwatch"
+  },
+  {
+    "name": ".inroleUtility",
+    "description": "Lists every person from the specified role on this server. You can use role ID, role name.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".inrole Some Role"
+  },
+  {
+    "name": ".checkpermsUtility",
+    "description": "Checks yours or bot's user-specific permissions on this channel.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".checkperms me\n.checkperms bot"
+  },
+  {
+    "name": ".useridUtility",
+    "description": "Shows user ID.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".uid\n.uid @SomeGuy"
+  },
+  {
+    "name": ".roleidUtility",
+    "description": "Shows the id of the specified role.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".rid Some Role"
+  },
+  {
+    "name": ".channelidUtility",
+    "description": "Shows current channel ID.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".cid"
+  },
+  {
+    "name": ".serveridUtility",
+    "description": "Shows current server ID.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".sid"
+  },
+  {
+    "name": ".rolesUtility",
+    "description": "List roles on this server or roles of a user if specified. Paginated, 20 roles per page.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".roles 2\n.roles @Someone"
+  },
+  {
+    "name": ".channeltopicUtility",
+    "description": "Sends current channel's topic as a message.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".ct"
+  },
+  {
+    "name": ".statsUtility",
+    "description": "Shows some basic stats for Nadeko.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".stats"
+  },
+  {
+    "name": ".showemojisUtility",
+    "description": "Shows a name and a link to every SPECIAL emoji in the message.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".se A message full of SPECIAL emojis"
+  },
+  {
+    "name": ".listserversUtility",
+    "description": "Lists servers the bot is on with some basic info. 15 per page.RequiresBot Owner Only",
+    "module": "Utility",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".listservers 3"
+  },
+  {
+    "name": ".savechatUtility",
+    "description": "Saves a number of messages to a text file and sends it to you.RequiresBot Owner Only",
+    "module": "Utility",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".savechat 150"
+  },
+  {
+    "name": ".pingUtility",
+    "description": "Ping the bot to see if there are latency issues.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".ping"
+  },
+  {
+    "name": ".botconfigeditUtility",
+    "description": "Sets one of available bot config settings to a specified value. Use the command without any parameters to get a list of available settings.RequiresBot Owner Only",
+    "module": "Utility",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".bce CurrencyName b1nzy\n.bce"
+  },
+  {
+    "name": ".calculateUtility",
+    "description": "Evaluate a mathematical expression.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".calc 1+1"
+  },
+  {
+    "name": ".calcopsUtility",
+    "description": "Shows all available operations in the .calc command",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".calcops"
+  },
+  {
+    "name": ".aliasesclearUtility",
+    "description": "Deletes all aliases on this server.RequiresAdministrator Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".aliasclear"
+  },
+  {
+    "name": ".aliasUtility",
+    "description": "Create a custom alias for a certain Nadeko command. Provide no alias to remove the existing one.RequiresAdministrator Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".alias allin .bf all h\n.alias \"linux thingy\" >loonix Spyware Windows"
+  },
+  {
+    "name": ".aliaslistUtility",
+    "description": "Shows the list of currently set aliases. Paginated.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".aliaslist\n.aliaslist 3"
+  },
+  {
+    "name": ".serverinfoUtility",
+    "description": "Shows info about the server the bot is on. If no server is supplied, it defaults to current one.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".sinfo Some Server"
+  },
+  {
+    "name": ".channelinfoUtility",
+    "description": "Shows info about the channel. If no channel is supplied, it defaults to current one.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".cinfo #some-channel"
+  },
+  {
+    "name": ".userinfoUtility",
+    "description": "Shows info about the user. If no user is supplied, it defaults a user running the command.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".uinfo @SomeUser"
+  },
+  {
+    "name": ".activityUtility",
+    "description": "Checks for spammers.RequiresBot Owner Only",
+    "module": "Utility",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".activity"
+  },
+  {
+    "name": ".invitecreateUtility",
+    "description": "Creates a new invite which has infinite max uses and never expires. Options --max-uses (-m)   Maximum number of times the invite can be used. Default 0 (never).--unique (-u)   Not setting this flag will result in bot getting the existing invite with the same settings if it exists, instead of creating a new one.--temporary (-t)   Setting this flag will make the link expire after 24h.  RequiresCreateInstantInvite Channel Permission",
+    "module": "Utility",
+    "permissions": [
+      "CreateInstantInvite Channel Permission"
+    ],
+    "usage": ".crinv"
+  },
+  {
+    "name": ".invitelistUtility",
+    "description": "Lists all invites for this channel. Paginated with 9 per page.RequiresManageChannels Channel Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageChannels Channel Permission"
+    ],
+    "usage": ".invitelist\n.invlist 3"
+  },
+  {
+    "name": ".invitedeleteUtility",
+    "description": "Deletes an invite on the specified index. Use .invitelist to see the list of invites.RequiresManageChannels Channel Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageChannels Channel Permission"
+    ],
+    "usage": ".invrm 2"
+  },
+  {
+    "name": ".parewrelUtility",
+    "description": "Forces the update of the list of patrons who are eligible for the reward.RequiresBot Owner Only",
+    "module": "Utility",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".parewrel"
+  },
+  {
+    "name": ".clparewUtility",
+    "description": "Claim patreon rewards. If you're subscribed to bot owner's patreon you can use this command to claim your rewards - assuming bot owner did setup has their patreon key.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".clparew"
+  },
+  {
+    "name": ".listquotesUtility",
+    "description": "Lists all quotes on the server ordered alphabetically or by ID. 15 Per page.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".liqu 3\n.liqu 3 id"
+  },
+  {
+    "name": "...Utility",
+    "description": "Shows a random quote with a specified name.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": "... abc"
+  },
+  {
+    "name": ".qsearchUtility",
+    "description": "Shows a random quote for a keyword that contains any text specified in the search.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".qsearch keyword text"
+  },
+  {
+    "name": ".quoteidUtility",
+    "description": "Displays the quote with the specified ID number. Quote ID numbers can be found by typing .liqu [num] where [num] is a number of a page which contains 15 quotes.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".qid 123456"
+  },
+  {
+    "name": "..Utility",
+    "description": "Adds a new quote with the specified name and message.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".. sayhi Hi"
+  },
+  {
+    "name": ".quotedelUtility",
+    "description": "Deletes a quote with the specified ID. You have to be either server Administrator or the creator of the quote to delete it.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".qdel 123456"
+  },
+  {
+    "name": ".delallqUtility",
+    "description": "Deletes all quotes on a specified keyword.RequiresAdministrator Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".delallq kek"
+  },
+  {
+    "name": ".remindUtility",
+    "description": "Sends a message to you or a channel after certain amount of time (max 2 months). First parameter is me/here/'channelname'. Second parameter is time in a descending order (mo>w>d>h>m) example: 1w5d3h10m. Third parameter is a (multiword) message.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".remind me 1d5h Do something\n.remind #general 1m Start now!"
+  },
+  {
+    "name": ".remindlistUtility",
+    "description": "Lists all reminders you created. Paginated.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".remindlist 1"
+  },
+  {
+    "name": ".reminddelUtility",
+    "description": "Deletes a reminder on the specified index.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".remindrm 3"
+  },
+  {
+    "name": ".remindtemplateUtility",
+    "description": "Sets message for when the remind is triggered.  Available placeholders are %user% - user who ran the command, %message% - Message specified in the remind, %target% - target channel of the remind.RequiresBot Owner Only",
+    "module": "Utility",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".remindtemplate %user%, do %message%!"
+  },
+  {
+    "name": ".repeatinvokeUtility",
+    "description": "Immediately shows the repeat message on a certain index and restarts its timer.RequiresManageMessages Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".repinv 1"
+  },
+  {
+    "name": ".repeatremoveUtility",
+    "description": "Removes a repeating message on a specified index. Use .repeatlist to see indexes.RequiresManageMessages Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".reprm 2"
+  },
+  {
+    "name": ".repeatUtility",
+    "description": "Repeat a message every specified number of minutes in the current channel. You can instead specify time of day for the message to be repeated at daily (make sure you've set your server's timezone). You can have up to 5 repeating messages on the server in total. Options --message (-m)   Message to be repeated--no-redundant (-n)   Whether the message should be reposted if the last message in the channel is this same message.--interval (-i)   How frequently the repeating message is posted, in minutes.  RequiresManageMessages Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".repeat -i 5 -m \"Hello there\" -n\n.repeat 17:30 -m \"tea time\""
+  },
+  {
+    "name": ".repeatlistUtility",
+    "description": "Shows currently repeating messages and their indexes.RequiresManageMessages Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".repeatlist"
+  },
+  {
+    "name": ".streamroleUtility",
+    "description": "Sets a role which is monitored for streamers (FromRole), and a role to add if a user from 'FromRole' is streaming (AddRole). When a user from 'FromRole' starts streaming, they will receive an 'AddRole'. Provide no parameters to disableRequiresManageRoles Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".streamrole \"Eligible Streamers\" \"Featured Streams\""
+  },
+  {
+    "name": ".streamrolekwUtility",
+    "description": "Sets keyword which is required in the stream's title in order for the streamrole to apply. Provide no keyword in order to reset.RequiresManageRoles Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".srkw\n.srkw PUBG"
+  },
+  {
+    "name": ".streamroleblUtility",
+    "description": "Adds or removes a blacklisted user. Blacklisted users will never receive the stream role.RequiresManageRoles Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".srbl add @b1nzy#1234\n.srbl rem @b1nzy#1234"
+  },
+  {
+    "name": ".streamrolewlUtility",
+    "description": "Adds or removes a whitelisted user. Whitelisted users will receive the stream role even if they don't have the specified keyword in their stream title.RequiresManageRoles Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".srwl add @b1nzy#1234\n.srwl rem @b1nzy#1234"
+  },
+  {
+    "name": ".convertlistUtility",
+    "description": "List of the convertible dimensions and currencies.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".convertlist"
+  },
+  {
+    "name": ".convertUtility",
+    "description": "Convert quantities. Use .convertlist to see supported dimensions and currencies.",
+    "module": "Utility",
+    "permissions": [],
+    "usage": ".convert m km 1000"
+  },
+  {
+    "name": ".verboseerrorUtility",
+    "description": "Toggles whether the bot should print command errors when a command is incorrectly used.RequiresManageMessages Server Permission",
+    "module": "Utility",
+    "permissions": [
+      "ManageMessages Server Permission"
+    ],
+    "usage": ".ve"
+  },
+  {
+    "name": ".experienceXp",
+    "description": "Shows your xp stats. Specify the user to show that user's stats instead.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".xp\n.xp @someguy"
+  },
+  {
+    "name": ".xplvluprewardsXp",
+    "description": "Shows currently set level up rewards.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".xprews"
+  },
+  {
+    "name": ".xprolerewardXp",
+    "description": "Sets a role reward on a specified level. Provide no role name in order to remove the role reward.RequiresManageRoles Server Permission",
+    "module": "Xp",
+    "permissions": [
+      "ManageRoles Server Permission"
+    ],
+    "usage": ".xprr 3 Social"
+  },
+  {
+    "name": ".xpcurrewardXp",
+    "description": "Sets a currency reward on a specified level. Provide no amount in order to remove the reward.RequiresBot Owner Only",
+    "module": "Xp",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".xpcr 3 50"
+  },
+  {
+    "name": ".xpnotifyXp",
+    "description": "Sets how the bot should notify you when you get a server or global level. You can set dm (for the bot to send a direct message), channel (to get notified in the channel you sent the last message in) or none to disable.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".xpn global dm\n.xpn server channel"
+  },
+  {
+    "name": ".xpexcludeXp",
+    "description": "Exclude a channel, role or current server from the xp system.RequiresAdministrator Server Permission",
+    "module": "Xp",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".xpex Role Excluded-Role\n.xpex Server"
+  },
+  {
+    "name": ".xpexclusionlistXp",
+    "description": "Shows the roles and channels excluded from the XP system on this server, as well as whether the whole server is excluded.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".xpexl"
+  },
+  {
+    "name": ".xpleaderboardXp",
+    "description": "Shows current server's xp leaderboard.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".xplb"
+  },
+  {
+    "name": ".xpgleaderboardXp",
+    "description": "Shows the global xp leaderboard.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".xpglb"
+  },
+  {
+    "name": ".xpaddXp",
+    "description": "Adds xp to a user on the server. This does not affect their global ranking. You can use negative values.RequiresAdministrator Server Permission",
+    "module": "Xp",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".xpadd 100 @b1nzy"
+  },
+  {
+    "name": ".xptempreloadXp",
+    "description": "Reloads the xp template file. Xp template file allows you to customize the position and color of elements on the .xp card.RequiresBot Owner Only",
+    "module": "Xp",
+    "permissions": [
+      "Bot Owner Only"
+    ],
+    "usage": ".xptr"
+  },
+  {
+    "name": ".clubtransferXp",
+    "description": "Transfers the ownership of the club to another member of the club.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubtransfer @b1nzy"
+  },
+  {
+    "name": ".clubadminXp",
+    "description": "Assigns (or unassigns) staff role to the member of the club. Admins can ban, kick and accept applications.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubadmin"
+  },
+  {
+    "name": ".clubcreateXp",
+    "description": "Creates a club. You must be at least level 5 and not be in the club already.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubcreate b1nzy's friends"
+  },
+  {
+    "name": ".clubiconXp",
+    "description": "Sets the club icon.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubicon https://i.imgur.com/htfDMfU.png"
+  },
+  {
+    "name": ".clubinfoXp",
+    "description": "Shows information about the club.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubinfo b1nzy's friends#123"
+  },
+  {
+    "name": ".clubbansXp",
+    "description": "Shows the list of users who have banned from your club. Paginated. You must be club owner to use this command.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubbans 2"
+  },
+  {
+    "name": ".clubappsXp",
+    "description": "Shows the list of users who have applied to your club. Paginated. You must be club owner to use this command.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubapps 2"
+  },
+  {
+    "name": ".clubapplyXp",
+    "description": "Apply to join a club. You must meet that club's minimum level requirement, and not be on its ban list.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubapply b1nzy's friends#123"
+  },
+  {
+    "name": ".clubacceptXp",
+    "description": "Accept a user who applied to your club.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubaccept b1nzy#1337"
+  },
+  {
+    "name": ".clubleaveXp",
+    "description": "Leaves the club you're currently in.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubleave"
+  },
+  {
+    "name": ".clubkickXp",
+    "description": "Kicks the user from the club. You must be the club owner. They will be able to apply again.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubkick b1nzy#1337"
+  },
+  {
+    "name": ".clubbanXp",
+    "description": "Bans the user from the club. You must be the club owner. They will not be able to apply again.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubban b1nzy#1337"
+  },
+  {
+    "name": ".clubunbanXp",
+    "description": "Unbans the previously banned user from the club. You must be the club owner.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubunban b1nzy#1337"
+  },
+  {
+    "name": ".clublevelreqXp",
+    "description": "Sets the club required level to apply to join the club. You must be club owner. You can't set this number below 5.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clublevelreq 7"
+  },
+  {
+    "name": ".clubdescXp",
+    "description": "Sets the club description. Maximum 150 characters. Club owner only.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubdesc This is the best club please join."
+  },
+  {
+    "name": ".clubdisbandXp",
+    "description": "Disbands the club you're the owner of. This action is irreversible.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clubdisband"
+  },
+  {
+    "name": ".clublbXp",
+    "description": "Shows club rankings on the specified page.",
+    "module": "Xp",
+    "permissions": [],
+    "usage": ".clublb 2"
+  },
+  {
+    "name": ".xpresetXp",
+    "description": "Resets specified user's XP, or the XP of all users in the server. You can't reverse this action.RequiresAdministrator Server Permission",
+    "module": "Xp",
+    "permissions": [
+      "Administrator Server Permission"
+    ],
+    "usage": ".xpreset @b1nzy\n.xpreset"
+  }
+]

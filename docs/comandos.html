@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <style type="text/css">
+    tr:nth-child(odd) {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+//<![CDATA[
+;(function(){
+"use strict"
+
+var req = new XMLHttpRequest()
+var cmds = null
+
+req.open('GET', 'commands.json', true)
+req.responseType = 'text'
+req.onreadystatechange = getCommands
+req.send()
+
+function getCommands () {
+  if (this.status == 200 && this.readyState == 4) {
+    cmds = JSON.parse(this.responseText)
+    createTable()
+    window.cmds = cmds
+  }
+}
+
+function createTable () {
+  var tbl = document.createElement('table')
+  var headers = ['comando', 'descripción', 'módulo', 'modo de uso']
+  var html = '<tr>'
+  for (var header of headers) {
+    html += '<th>' + header + '</th>'
+  }
+  html += '</tr>'
+  tbl.innerHTML = html;
+  createEntries(tbl)
+  document.body.appendChild(tbl)
+}
+
+function createEntries (tbl) {
+  for (var cmd of cmds) {
+    var tr = document.createElement('tr')
+    var html = '<td>' + cmd.name + '</td>'
+    html += '<td>' + cmd.description + '</td>'
+    html += '<td>' + cmd.module + '</td>'
+    html += '<td><pre>' + cmd.usage + '</pre></td>'
+    tr.innerHTML = html
+    tbl.appendChild(tr)
+  }
+}
+
+}())
+//]]>
+</script>
+</body>
+</html>
