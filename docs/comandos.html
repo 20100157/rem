@@ -10,11 +10,10 @@
     color: #808080
   }
 
-  thead tr {
-    text-transform: capitalize;
+  thead {
     background-color: #6c7ae0;
     font-family: Lato-Bold, sans-serif;
-    font-size: 1.05em;
+    font-size: 18px;
   }
 
   tbody tr:nth-child(even) {
@@ -25,10 +24,23 @@
     color: #bd4147;
     background-color: #f8f9fA;
   }
+
+  tbody {
+    display: block;
+    max-height: calc(100vh - 3.75em);
+    overflow-y: auto;
+  }
+
+  thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
   </style>
 </head>
 <body>
-<div class="container mt-4">
+<div class="container">
   <div class="card shadow">
   <div class="table-responsive rounded" id="root">
   </div>
@@ -56,7 +68,7 @@ function getCommands () {
 
 function createTable () {
   var tbl = document.createElement('table')
-  var headers = ['comando', 'descripción', 'módulo', 'modo de uso']
+  var headers = ['Comando', 'Descripción', 'Módulo', 'Modo de uso']
   var html = '<thead><tr class="text-white">'
   for (var header of headers) {
     html += '<th>' + header + '</th>'
@@ -64,6 +76,7 @@ function createTable () {
   html += '</tr></thead><tbody></tbody>'
   tbl.innerHTML = html;
   tbl.classList.add('table')
+  tbl.classList.add('my-0')
   createEntries(tbl.querySelector('tbody'))
   document.querySelector('#root').appendChild(tbl)
 }
